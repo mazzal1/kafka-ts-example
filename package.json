@@ -1,5 +1,5 @@
 {
-  "name": "TSKafka",
+  "name": "ts-kafka-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/kafka-node": "^3.0.0",
     "@types/kafkajs": "^1.9.0",
+    "@types/node": "^17.0.40",
     "ts-node": "^8.10.1",
     "typescript": "^3.8.3"
   },

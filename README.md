@@ -1,13 +1,36 @@
-# TypeScript KafkaJS 
+# TypeScript KafkaJS
 
-## Simple Producer & Client example in KafkaJS
+## Simple Producer & Client example in KafkaJS with
 
 ### How to run:
 
-Step 1: Setup Kafka (I used the following blog): https://blog.soshace.com/the-ultimate-introduction-to-kafka-with-javascript/
+#### Step 1: Setup Kafka and Zookeeper
 
-Step 2: Onc you have both the kafka-server and the kafka-zookeeper running, you can start the producer using `ts-node src/producer.ts`
+```
+docker-compose up -d
+```
 
-Step 3: In a new terminal window, run `ts-node src/consumer.ts` to start the client. 
+#### Step 2: Create Kafka topic from inside broker
 
-Step 4: Go back to the producer, and start typing your data. 
+```
+docker exec broker \
+kafka-topics --bootstrap-server broker:9092 \
+             --create \
+             --topic test-topic
+```
+
+#### Step 3: Run Producer
+
+```
+npx ts-node src/producer.ts
+```
+
+#### Step 4: Run Consumer
+
+In another terminal:
+
+```
+npx ts-node src/consumer.ts
+```
+
+Customization of: https://github.com/maddymanu/TypeScript-KafkaJS-Example
