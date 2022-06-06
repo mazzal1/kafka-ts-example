@@ -1,6 +1,6 @@
 # TypeScript KafkaJS
 
-## Simple Producer & Client example in KafkaJS with
+## Simple Producer & Client example in KafkaJS
 
 ### How to run:
 
